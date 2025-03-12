@@ -1,0 +1,9 @@
+com/city/common/model/response/ErrorResponse.class
+com/city/common/exception/ExceptionHandler.class
+com/city/common/model/entity/UserEntity.class
+com/city/common/model/entity/EventRegistrationEntity.class
+com/city/common/dynamodb/DynamoDbClientFactory.class
+com/city/common/model/entity/EventEntity.class
+com/city/common/util/EventGenerator.class
+com/city/common/model/entity/EventRegistrationEntity$EventRegistrationEntityBuilder.class
+com/city/common/model/enums/RegistrationStatus.class

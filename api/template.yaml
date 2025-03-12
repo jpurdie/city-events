@@ -1,0 +1,66 @@
+# This SAM Template is for local development use only.
+
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+
+Resources:
+  EventRegistrationFunction:
+    Type: AWS::Serverless::Function
+    Metadata:
+      SkipBuild: true
+    Properties:
+      FunctionName: EventRegistrationHandler
+      Handler: com.city.registration.handler.EventRegistrationHandler::handleRequest
+      CodeUri: event-registration-lambda/target/event-registration-lambda-1.0.0.jar
+      Runtime: java21
+      MemorySize: 1024
+      Timeout: 15
+      Environment:
+        Variables:
+          DYNAMODB_ENV: LOCAL
+      Policies:
+        - AWSLambdaBasicExecutionRole
+      Events:
+        GetAllEventRegistrations:
+          Type: HttpApi
+          Properties:
+            Path: /eventregistrations
+            Method: GET
+
+        GetEventRegistrationById:
+          Type: HttpApi
+          Properties:
+            Path: /eventregistrations/{eventId}
+            Method: GET
+
+        CreateEventRegistration:
+          Type: HttpApi
+          Properties:
+            Path: /eventregistrations
+            Method: POST
+
+        PreflightCORSById:
+          Type: HttpApi
+          Properties:
+            Path: /eventregistrations/{id}
+            Method: OPTIONS
+
+        DeleteEventRegistration:
+          Type: HttpApi
+          Properties:
+            Path: /eventregistrations/{eventId}
+            Method: DELETE
+
+        PreflightCORS:
+          Type: HttpApi
+          Properties:
+            Path: /eventregistrations
+            Method: OPTIONS
+
+  HttpApiGateway:
+    Type: AWS::Serverless::HttpApi
+    Properties:
+      CorsConfiguration:
+        AllowMethods: ["GET", "POST", "DELETE", "OPTIONS"]
+        AllowHeaders: ["Content-Type", "Authorization"]
+        AllowOrigins: ["*"]

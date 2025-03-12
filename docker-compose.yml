@@ -1,0 +1,28 @@
+# This Docker Compose file is for local development use only.
+# It sets up a local DynamoDB instance along with a web-based admin UI.
+
+version: "3.8"
+
+services:
+  dynamodb:
+    build: .
+    container_name: local-dynamodb
+    ports:
+      - "8000:8000"
+    volumes:
+      - dynamodb-data:/home/dynamodblocal
+    command: ["-jar", "DynamoDBLocal.jar", "-sharedDb"]
+
+  dynamodb-admin:
+    image: aaronshaf/dynamodb-admin:latest
+    container_name: dynamodb-admin
+    ports:
+      - "8001:8001"
+    environment:
+      DYNAMO_ENDPOINT: http://dynamodb:8000
+    depends_on:
+      - dynamodb
+
+volumes:
+  dynamodb-data:
+    driver: local
