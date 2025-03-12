@@ -1,4 +1,4 @@
-# City Events Application
+# 🏠 City Events Application
 
 ## Overview
 This project is a **serverless event management platform** that allows city citizens to view, register, and manage attendance for local events.  
@@ -12,7 +12,7 @@ It is built with **AWS Lambda, DynamoDB, S3, Vue 3, and Terraform** for infrastr
 
 /api -> AWS Lambda (Java 21, Maven) for event-related API endpoints 
 
-/Makefile -> Automates the build process
+/makefile -> Automates the build process
 ```
 
 ## Technology Stack
@@ -22,12 +22,12 @@ It is built with **AWS Lambda, DynamoDB, S3, Vue 3, and Terraform** for infrastr
 - **Authentication**: Mocked (any email & password will work)  
 
 ## Features
-✅ **Event Management** → View and register for local events  
-✅ **Serverless Architecture** → Uses AWS Lambda Function URLs  
-✅ **Infrastructure as Code** → Terraform manages AWS resources  
-✅ **Stateless API** → DynamoDB for storage  
-✅ **Single Page App (SPA)** → Hosted in an S3 bucket  
-✅ **Makefile for Build Automation** → One-command build  
+✔️ **Event Management** → View and register for local events  
+✔️ **Serverless Architecture** → Uses AWS Lambda Function URLs  
+✔️ **Infrastructure as Code** → Terraform manages AWS resources  
+✔️ **Stateless API** → DynamoDB for storage  
+✔️ **Single Page App (SPA)** → Hosted in an S3 bucket  
+✔️ **Makefile for Build Automation** → One-command build  
 
 ## Deployment
 
@@ -46,9 +46,9 @@ make
 ```
 This will:
 
-✔ Build and package the API (Maven)
+✔️ Build and package the API (Maven)
 
-✔ Build the SPA (Vue 3)
+✔️ Build the SPA (Vue 3)
 
 
 ### Deploy Infrastructure
@@ -74,4 +74,7 @@ terraform apply
 
 🧪 Unit & Integration Tests → Improve API & client testing
 
-🔍 Static Code Analysis tools like Spotbugs
+🔍 Static Code Analysis -> Improve code quality 
+
+🗺️ i18n & l10n -> Support for internationalization and localization 
+

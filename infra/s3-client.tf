@@ -70,7 +70,15 @@ output "s3_website_url" {
   value       = "http://${aws_s3_bucket.app_client_bucket.bucket}.s3-website-${var.aws_region}.amazonaws.com"
   description = "The URL of the S3 bucket configured for static website hosting"
 }
+output "website_endpoint" {
+  value       = aws_s3_bucket_website_configuration.app_client_bucket_website.website_endpoint
+  description = "aws_s3_bucket_website_configuration.app_client_bucket_website.website_endpoint"
+}
 
+output "website_domain" {
+  value       = aws_s3_bucket_website_configuration.app_client_bucket_website.website_domain
+  description = "aws_s3_bucket_website_configuration.app_client_bucket_website.website_domain"
+}
 output "s3_sync_command" {
   value       = "aws s3 sync ../client/dist s3://${aws_s3_bucket.app_client_bucket.bucket}/ --delete"
   description = "CMD to sync SPA manually"
