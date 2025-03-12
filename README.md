@@ -78,3 +78,5 @@ terraform apply
 
 🗺️ i18n & l10n -> Support for internationalization and localization 
 
+🌐 VPC -> Secure and isolate cloud resources
+

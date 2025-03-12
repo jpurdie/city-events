@@ -1,8 +1,6 @@
-/Users/justinpurdie/Documents/Code/city-events/api/common/src/main/java/com/city/common/dynamodb/DynamoDbClientFactory.java
 /Users/justinpurdie/Documents/Code/city-events/api/common/src/main/java/com/city/common/exception/ExceptionHandler.java
 /Users/justinpurdie/Documents/Code/city-events/api/common/src/main/java/com/city/common/model/entity/EventEntity.java
 /Users/justinpurdie/Documents/Code/city-events/api/common/src/main/java/com/city/common/model/entity/EventRegistrationEntity.java
-/Users/justinpurdie/Documents/Code/city-events/api/common/src/main/java/com/city/common/model/entity/UserEntity.java
 /Users/justinpurdie/Documents/Code/city-events/api/common/src/main/java/com/city/common/model/enums/RegistrationStatus.java
 /Users/justinpurdie/Documents/Code/city-events/api/common/src/main/java/com/city/common/model/response/ErrorResponse.java
 /Users/justinpurdie/Documents/Code/city-events/api/common/src/main/java/com/city/common/util/EventGenerator.java
