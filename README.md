@@ -1,4 +1,4 @@
-# 🏠 City Events Application
+# City Events Application
 
 ## Overview
 This project is a **serverless event management platform** that allows city citizens to view, register, and manage attendance for local events.  
